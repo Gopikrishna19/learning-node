@@ -1,0 +1,11 @@
+{
+  "name": "03-events-and-streams",
+  "version": "1.0.0",
+  "description": "node events and streams",
+  "main": "events-by-extending-emitter.js",
+  "devDependencies": {
+    "request": "2.79.0"
+  },
+  "author": "Gopikrishna Sathyamurthy",
+  "license": "ISC"
+}
