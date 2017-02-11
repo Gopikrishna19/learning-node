@@ -1,6 +1,6 @@
 let count = 0;
 
-const t = setInterval(function() {
+const t = setInterval(() => {
   count++;
   console.log("Interval of 10 ms, count = " + count);
   if (count === 10) {
@@ -8,7 +8,7 @@ const t = setInterval(function() {
   }
 }, 10);
 
-setTimeout(function() {
+setTimeout(() => {
   console.log("Timeout at 200 ms");
 },200);
 
