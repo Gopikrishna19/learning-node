@@ -1,0 +1,11 @@
+{
+  "name": "02-modules",
+  "version": "0.0.0",
+  "description": "node modules",
+  "main": "module-sources.js",
+  "devDependencies": {
+    "timestamp": "0.0.1"
+  },
+  "author": "Gopikrishna Sathyamurthy",
+  "license": "ISC"
+}
