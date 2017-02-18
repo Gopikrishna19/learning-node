@@ -1,0 +1,14 @@
+{
+  "name": "06-testing",
+  "version": "1.0.0",
+  "main": "assert.js",
+  "dependencies": {
+    "should": "11.2.0",
+    "mocha": "3.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Gopikrishna Sathyamurthy",
+  "license": "ISC"
+}
