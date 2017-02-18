@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Socket</title>
+  </head>
+  <body onload="onLoad()">
+    <h1>Sample web socket</h1>
+    <p>
+      Timer: <span id="timer"></span>
+    </p>
+
+    <form onsubmit="submitData(); return false">
+      <p>
+        <label>
+          Data: <input type="text" id="inputData" autocomplete="off">
+        </label>
+        <input type="button" onclick="submitData()" value="Send">
+      </p>
+    </form>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      let socket;
+
+      function onLoad() {
+        socket = io.connect();
+
+        socket.on('timer', time => document.getElementById('timer').innerHTML = time);
+      }
+
+      function submitData() {
+        const data = document.getElementById('inputData').value;
+
+        socket.emit('submit', data)
+      }
+    </script>
+  </body>
+</html>
