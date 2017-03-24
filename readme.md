@@ -41,12 +41,24 @@ Config is stored at `~/.npmrc`.
 npm <install|i>                         # install packages in package.json
 npm <install|i> <name>[@tag|version]    # install given package at given version
 ```
-Common options are
+##### Common options are
 ```
 [-S|--save|-D|--save-dev|-O|--save-optional]
 [-E|--save-exact]
 [-B|--save-bundle]
 [--dry-run]
+```
+
+##### Subversion options
+```posh
+@1.2.3 --save-exact                     # install exactly 1.2.3
+@1.2.3                                  # defaults to ^1.2.3
+@^1.2.3                                 # install 1.2.3 to <2.0.0, allows only minor and patch upgrades
+@">1.2.3"                               # install greater than 1.2.3, allows major upgrades
+@1.2.x                                  # install 1.2.0 to <1.3.0, allows only patch upgrades
+@~1.2.3                                 # install latest patch
+@[1.x|1]                                # install latest minor of 1
+@">=1.2.3 <1.3.4"                       # install 1.2.3 to <1.3.4
 ```
 
 ### installing packages globally
