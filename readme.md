@@ -40,6 +40,23 @@ Config is stored at `~/.npmrc`.
 ```posh
 npm <install|i>                         # install packages in package.json
 npm <install|i> <name>[@tag|version]    # install given package at given version
-
-common options: [-S|--save|-D|--save-dev|-O|--save-optional] [-E|--save-exact] [-B|--save-bundle] [--dry-run]
+```
+Common options are
+```
+[-S|--save|-D|--save-dev|-O|--save-optional] 
+[-E|--save-exact] 
+[-B|--save-bundle] 
+[--dry-run]
 ``` 
+
+### listing packages
+```posh
+npm <list|ls>                           # list all packages in package.json
+npm <list|ls> <name>[@tag|version]      # list given package at given version
+npm <list|ls> [--depth x]               # list dependency tree at `x` level
+npm <list|ls> [--global|-g]             # list globally installed packages
+npm <list|ls> [--long]                  # list packges with descipriton and other info
+npm <list|ls> [--json]                  # print dependency tree as json
+npm <list|ls> [--parseable]             # print dependency tree as dir strings
+npm <list|ls> [--dev|--prod]            # list dev/prod only dependencies
+```
