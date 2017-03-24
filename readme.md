@@ -49,6 +49,12 @@ Common options are
 [--dry-run]
 ``` 
 
+### installing packages globally
+
+```posh
+npm <install|i> -g <name>[@tag|version]
+``` 
+
 ### listing packages
 ```posh
 npm <list|ls>                           # list all packages in package.json
