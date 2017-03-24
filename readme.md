@@ -11,3 +11,7 @@ npm help [command]      ; opens browser
 npm help-search [term]  ; search help content for the term
 
 ```
+
+### shortcuts
+
+[link to misc shorthand syntax](https://docs.npmjs.com/misc/config)
