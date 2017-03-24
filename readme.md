@@ -85,3 +85,12 @@ npm <list|ls> [--dev|--prod]            # list dev/prod only dependencies
 ```posh
 npm <rm|remove|un|unlink|unintstall> <package> [-S|--save|-D|--save-dev|-O|--save-optional]
 ```
+
+### updating packages
+
+```posh
+npm update                              # update all packages
+npm update [package]                    # update given package
+npm update [--dev|--prod]               # update dev/prod dependencies
+npm update [--global|-g]                # update global packages
+```
