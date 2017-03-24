@@ -1,8 +1,14 @@
 const cluster = require('cluster');
 const http = require('http');
-const workersCount = 2;
+const workersCount = 4;
+
+function sleepFor(sleepDuration) {
+  const now = new Date().getTime();
+  while (new Date().getTime() < now + sleepDuration) { /* do nothing */ }
+}
 
 if (cluster.isMaster) {
+  let request = 0;
 
   for (let i = 0; i < workersCount; ++i) {
     cluster.fork();
@@ -21,6 +27,7 @@ if (cluster.isMaster) {
     'code', code,
     'signal', signal
   ));
+  cluster.on('message', () => console.log('Serving request', request += 1));
 
 } else {
 
@@ -34,13 +41,16 @@ if (cluster.isMaster) {
 
     count += 1;
 
-    console.log('Worker #', cluster.worker.id, 'is incrementing count to', count);
+    console.log('Worker #', cluster.worker.id);
+    process.send('message');
 
-    res.end(['Hello world from worker #', cluster.worker.id, 'pid', cluster.worker.process.pid, 'count', count].join(' '));
+    sleepFor(Math.random() * 1000);
 
-    if (count === 3) {
-      cluster.worker.destroy(); // destroy after 3 serves
-    }
+    res.end([
+      'Hello world from worker #', cluster.worker.id,
+      'pid', cluster.worker.process.pid,
+      'count', count
+    ].join(' '));
 
   }).listen(8080);
 
