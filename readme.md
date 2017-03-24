@@ -4,11 +4,11 @@
 
 ### help
 
-```bash
-npm -h                  ; show in cli
-npm [command] -h        ; show about command in cli
-npm help [command]      ; opens browser
-npm help-search [term]  ; search help content for the term
+```posh
+npm -h                  # show in cli
+npm [command] -h        # show about command in cli
+npm help [command]      # opens browser
+npm help-search [term]  # search help content for the term
 
 ```
 
@@ -18,7 +18,7 @@ npm help-search [term]  ; search help content for the term
 
 ### creating package
 
-```bash
-npm init                ; initialize packagae.json with initial values
-npm init -y             ; initialize packagae.json with default values
+```posh
+npm init                # initialize packagae.json with initial values
+npm init -y             # initialize packagae.json with default values
 ```
